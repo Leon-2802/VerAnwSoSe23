@@ -15,10 +15,10 @@ public class TimeService {
 		while (true) {
 			
 			try {
-				Socket socket = serverSocket.accept();
+				Socket clientSocket = serverSocket.accept();
 				
-				BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-				BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
+				BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 				
 				writer.write("connected!");
 				writer.newLine();
@@ -40,7 +40,7 @@ public class TimeService {
 						writer.flush();
 						break;
 					default:
-						serverSocket.close();
+						clientSocket.close();
 						break;
 					}
 				}
