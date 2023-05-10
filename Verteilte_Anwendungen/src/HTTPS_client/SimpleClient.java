@@ -16,8 +16,8 @@ public class SimpleClient {
 	public static void main(String[] args) {
 		try {
 //			get("https://www.bundestag.de/presse");
-//			System.out.println(urlExists("https://www.bundestag.de/presse"));
-			System.out.println(getContent("https://www.bundestag.de/presse"));
+			System.out.println(urlExists("https://www.bundestag.de/presse"));
+//			System.out.println(getContent("https://www.bundestag.de/presse"));
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
