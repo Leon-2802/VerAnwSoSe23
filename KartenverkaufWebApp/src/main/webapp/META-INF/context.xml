@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource name="jdbc/MyDB" auth="Container"
+		type="javax.sql.DataSource" username="demo" password="passwort"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://127.0.0.1:3306/demo" maxActive="20" maxIdle="10"
+		removeAbandoned="true" removeAbandonedTimeout="300"
+		logAbandoned="true" />
+	<Resource name="jdbc/MyDB2" auth="Container"
+		type="javax.sql.DataSource" username="demo" password="passwort"
+		driverClassName="org.mariadb.jdbc.Driver"
+		url="jdbc:mariadb://192.168.0.2:3307/demo" maxActive="20" maxIdle="10"
+		removeAbandoned="true" removeAbandonedTimeout="300"
+		logAbandoned="true" />
+</Context>

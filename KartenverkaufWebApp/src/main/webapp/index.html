@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kartenverkauf</title>
+<link rel="stylesheet" href="/style.css">
+<script src="restClient.js" defer></script>
+</head>
+<body>
+
+	<h1>Kartenverkauf</h1>
+	<div id="wrap-content">
+		<div id=wrap-output>
+			<table id="seats">
+
+			</table>
+			<div id="wrap-info">
+				<div class="info-element frei">frei</div>
+				<div class="info-element reserviert">reserviert</div>
+				<div class="info-element verkauft">verkauft</div>
+			</div>
+			<p id="reservation-info"></p>
+		</div>
+		<div id=wrap-form>
+			<div>
+				<form id="buy-seat" class="form-row" action="javascript:restOperation('rest/kartenverkaufrest/kaufe', 'buy-seat')">
+					<label for="seat-number">nr:</label>
+					<input id="buy-seat-nr" name="number" type="number">
+					<button type="submit">kaufe</button>
+				</form>
+				<form id="reserve-seat" class="form-row" action="javascript:restOperation('rest/kartenverkaufrest/reserviere', 'reserve-seat')">
+					<label for="number">nr:</label>
+					<input name="number" type="number">
+					<label for="name">name</label>
+					<input name="name" type="text">
+					<button type="submit">reserviere</button>
+				</form>
+				<form id="buy-reserved" class="form-row" action="javascript:restOperation('rest/kartenverkaufrest/kaufe-reserviert', 'buy-reserved')">
+					<label for="number">nr:</label>
+					<input name="number" type="number">
+					<label for="name">name</label>
+					<input name="name" type="text">
+					<button type="submit">kaufe reserviert</button>
+				</form>
+				<form id="cancel-seat" class="form-row" action="javascript:restOperation('rest/kartenverkaufrest/storniere', 'cancel-seat')">
+					<label for="number">nr:</label>
+					<input name="number" type="number">
+					<button type="submit">storniere</button>
+				</form>
+				<form id="cancel-reservations" action="javascript:restOperation('rest/kartenverkaufrest/hebe-reservierungen-auf', 'cancel-reservations')">
+					<button class="form-btn" type="submit">hebe Reservierungen auf</button>
+				</form>
+				<form id="initialize" action="javascript:restOperation('rest/kartenverkaufrest/initialisiere', 'initialize')">
+					<button class="form-btn" type="submit">initialisiere</button>
+				</form>
+			</div>
+			<p id="session-info"></p>
+		</div>
+	</div>
+
+</body>
+</html>
