@@ -6,3 +6,6 @@
 - Database connection
 - Servlets
 - REST APIs
+
+Basic Assignements: https://github.com/Leon-2802/VerAnwSoSe23/tree/master/Verteilte_Anwendungen/src
+Final Assignement: https://github.com/Leon-2802/VerAnwSoSe23/tree/master/KartenverkaufWebApp
