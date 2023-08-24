@@ -4,3 +4,5 @@
 - Multithreading
 - SQL Databases
 - Database connection
+- Servlets
+- REST APIs
